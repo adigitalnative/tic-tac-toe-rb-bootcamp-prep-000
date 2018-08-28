@@ -33,9 +33,18 @@ def position_taken?(board, index)
   end
 end
 
+def on_game_board?(index)
+  valid_indexes = [0,1,2,3,4,5,6,7,8]
+  
+  if valid_indexes.include?(index)
+    true
+  else
+    false
+  end
+end
+
+
 def valid_move?(board, index)
-  # Returns true if the move is valid (Present on game board, not already filled)
-  # Returns false if the move is not valid
   if position_taken?(board, index)
     return false
   elsif !on_game_board?(index)
@@ -44,3 +53,5 @@ def valid_move?(board, index)
     return true
   end
 end
+
+def turn
