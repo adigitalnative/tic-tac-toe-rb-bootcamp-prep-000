@@ -74,3 +74,6 @@ def turn_count(board)
   end
   filled_slots.count
 end
+
+def current_player(board)
+end
