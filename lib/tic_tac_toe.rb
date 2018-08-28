@@ -43,16 +43,10 @@ def on_game_board?(index)
   end
 end
 
-
 def valid_move?(board, index)
-  if position_taken?(board, index)
-    return false
-  elsif !on_game_board?(index)
-    return false
-  else
-    return true
-  end
+  index.between?(0,8) && !position_taken?(board, index)
 end
+
 
 def turn(board)
   display_board(board)
