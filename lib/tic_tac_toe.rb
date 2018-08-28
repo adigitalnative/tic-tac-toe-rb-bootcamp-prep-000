@@ -122,3 +122,14 @@ def winner(board)
     board[winning_combination[0]]
   end
 end
+
+def play
+  unless over?(board) { turn(board) }
+  
+  if won?(board)
+    puts "Congratulations, #{winner(board)}"
+  elsif draw?(board)
+    puts "The game was a draw"
+  end
+end
+end
