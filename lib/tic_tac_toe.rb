@@ -69,5 +69,8 @@ def turn(board)
 end
 
 def turn_count(board)
-  board.
+  filled_slots = board.select do |slot|
+    slot != " "
+  end
+  filled_slots.count
 end
